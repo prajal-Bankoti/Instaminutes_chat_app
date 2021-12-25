@@ -1,0 +1,19 @@
+#text-box{
+    height: 80vh;
+    width: 70vh;
+    border: 2px solid black;
+    overflow: auto;
+    margin: auto;
+}
+#input{
+    width: 70vh;
+    margin: auto;
+}
+#input input{
+    width: 78%;
+   
+}
+#input button{
+    width: 19%;
+   
+}
