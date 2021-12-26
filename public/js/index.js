@@ -8,7 +8,7 @@ do {
   userName = prompt("Please enter your name").toUpperCase();
 } while (!userName);
 
-function showName() {
+function showName() { // showing user name function
   let msg = {
     user: userName,
     message: `${userName} is conneced`,
@@ -19,17 +19,19 @@ function showName() {
 }
 showName();
 
+/// for press enter button 
 inputBox.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     sendMessage(e.target.value);
     e.target.value=""
   }
 });
+
 function sendMessage(message) {
   let msg = {
     user: userName,
     message: message,
-    start: Date().split(" ")[4],
+    start: Date().split(" ")[4],/// for showing date
   };
   console.log(Date.now());
   appendMessage(msg, "out-msg");
@@ -38,6 +40,7 @@ function sendMessage(message) {
   socket.emit("mess", msg);
 }
 
+/// append function to show massage
 function appendMessage(msg, type) {
   let mainDiv = document.createElement("div");
   let className = type;
@@ -53,7 +56,8 @@ function appendMessage(msg, type) {
   textBox.appendChild(mainDiv);
 }
 
-socket.on("mess", (msg) => {
-  textBox.scrollTo(0, textBox.scrollHeight);
+/// To receive massage from server
+ socket.on("mess", (msg) => {
+  textBox.scrollTo(0, textBox.scrollHeight); /// to sroll 
   appendMessage(msg, "inc-msg");
 });
