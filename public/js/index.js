@@ -1,5 +1,4 @@
 var socket = io();
-
 let name;
 let inputBox = document.querySelector("#inputBox");
 let textBox = document.querySelector("#text-box");
