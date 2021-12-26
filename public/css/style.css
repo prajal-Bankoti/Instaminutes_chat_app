@@ -48,10 +48,11 @@
   padding: 9px 85px 0 15px;
   float: left;
   clear: both;
-  background: rgb(167, 192, 245);
+  background: rgb(165, 255, 210);
   margin-left: 15px;
   margin-top: 10px;
   border-radius: 13px;
+  color: white;
   max-width: 220px;
   overflow: hidden;
 }
