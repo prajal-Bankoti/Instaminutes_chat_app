@@ -17,11 +17,12 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 io.on("connection", (socket) => {
-  console.log("a user connected" + socket.id);
+
   socket.on("mess", (msg) => {
     socket.broadcast.emit("mess",msg)
   });
 });
+
 server.listen(PORT, () => {
   console.log(PORT);
 });

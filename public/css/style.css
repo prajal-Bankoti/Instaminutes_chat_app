@@ -1,33 +1,101 @@
-#text-box {
-  height: 80vh;
-  width: 70vh;
-  border: 2px solid black;
-  overflow: auto;
+#main-box {
+  height: 88vh;
+  width: 50%;
   margin: auto;
+  background-color: rgb(255, 247, 247);
+  border: 2px solid black;
+}
+.title {
+  width: 50%;
+  margin: auto;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(0, 217, 255);
+}
+.title i {
+  font-size: 20px;
+  margin-left: 5%;
+  float: left;
+  padding: 15px;
+}
+.title div {
+  font-size: 17px;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+#text-box {
+  height: 93.3%;
+  width: 100%;
+
+  overflow: auto;
 }
 #input {
-  width: 70vh;
+  width: 97.9%;
   margin: auto;
+  margin-left: -1px;
+  height: 6%;
 }
 #input input {
-  width: 78%;
+  width: 99.5%;
+  font-size: 20px;
+  padding-left: 2%;
+  height: 100%;
+  background-color: rgb(255, 247, 247);
+  border: black 2px solid;
 }
-#input button {
-  width: 19%;
-}
+
 #inc-msg {
-  background: burlywood;
-  padding: 10px;
+  padding: 9px 85px 0 15px;
   float: left;
   clear: both;
+
   margin-left: 15px;
-  border-radius: 4px;
+  margin-top: 10px;
+  border-radius: 13px;
+  max-width: 220px;
+  overflow: hidden;
+}
+
+#inc-msg div,
+#out-msg div {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.897);
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+#inc-msg span,
+#out-msg span {
+  float: left;
+  font-size: 12px;
+  margin-left: 98%;
+  color: rgb(255, 208, 208);
+}
+p {
+  margin-top: 5px;
+  margin-bottom: 7px;
 }
 #out-msg {
-  background: rgb(141, 135, 222);
-  padding: 10px;
+  background: rgb(125, 164, 248);
+  color: white;
+  padding: 9px 85px 0px 15px;
   float: right;
+  margin-top: 10px;
+  max-width: 220px;
+  overflow: hidden;
   clear: both;
   margin-right: 15px;
-  border-radius: 4px;
+  border-radius: 13px;
+}
+@media screen and (max-width: 820px) {
+  #main-box,
+  .title {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 490px) {
+  #main-box,
+  .title {
+    width: 95%;
+  }
 }

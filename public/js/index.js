@@ -1,5 +1,3 @@
-
-
 var socket = io();
 
 let name;
@@ -7,19 +5,33 @@ let inputBox = document.querySelector("#inputBox");
 let textBox = document.querySelector("#text-box");
 
 do {
-  userName = prompt("Please enter your name");
+  userName = prompt("Please enter your name").toUpperCase();
 } while (!userName);
+
+function showName() {
+  let msg = {
+    user: userName,
+    message: `${userName} is conneced`,
+    start: Date().split(" ")[4],
+  };
+  appendMessage(msg, "out-msg");
+  socket.emit("mess", msg);
+}
+showName();
 
 inputBox.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     sendMessage(e.target.value);
+    e.target.value=""
   }
 });
 function sendMessage(message) {
   let msg = {
     user: userName,
     message: message,
+    start: Date().split(" ")[4],
   };
+  console.log(Date.now());
   appendMessage(msg, "out-msg");
   textBox.scrollTo(0, textBox.scrollHeight);
   console.log(textBox.scrollHeight);
@@ -32,7 +44,8 @@ function appendMessage(msg, type) {
   mainDiv.id = className;
 
   let mar = `
-  <h4>${msg.user}</h4>
+  <span>${msg.start}</span>
+  <div>${msg.user}</div>
   <p>${msg.message}</p>
   `;
 
