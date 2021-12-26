@@ -1,19 +1,33 @@
-#text-box{
-    height: 80vh;
-    width: 70vh;
-    border: 2px solid black;
-    overflow: auto;
-    margin: auto;
+#text-box {
+  height: 80vh;
+  width: 70vh;
+  border: 2px solid black;
+  overflow: auto;
+  margin: auto;
 }
-#input{
-    width: 70vh;
-    margin: auto;
+#input {
+  width: 70vh;
+  margin: auto;
 }
-#input input{
-    width: 78%;
-   
+#input input {
+  width: 78%;
 }
-#input button{
-    width: 19%;
-   
+#input button {
+  width: 19%;
+}
+#inc-msg {
+  background: burlywood;
+  padding: 10px;
+  float: left;
+  clear: both;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+#out-msg {
+  background: rgb(141, 135, 222);
+  padding: 10px;
+  float: right;
+  clear: both;
+  margin-right: 15px;
+  border-radius: 4px;
 }
