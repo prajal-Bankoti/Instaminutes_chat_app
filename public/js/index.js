@@ -10,7 +10,7 @@ do {
 function showName() { // showing user name function
   let msg = {
     user: userName,
-    message: `${userName} is conneced`,
+    message: `${userName} is connected`,
     start: Date().split(" ")[4],
   };
   appendMessage(msg, "out-msg");
